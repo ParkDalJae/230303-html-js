@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById('root')
+      const btn = document.createElement('button')
+      btn.textContent = "눌러"
+      root.appendChild(btn)
+      
+      const lunch = {
+        
+      }
+      const lunchType = [
+        "한식",
+        "양식",
+        "중식",
+        "일식",
+      ]
+      const lunchTexture = [
+        "밥",
+        "빵",
+        "면",
+        "떡",
+      ]
+      const lunchArmy = [
+        "육군",
+        "해군",
+        "공군"
+      ]
+      const lunchHot=[
+        "매운거",
+        "안매운거",
+      ]
+      const lunchCool=[
+        "뜨거운거",
+        "차가운거"
+      ]
+      btn.addEventListener("click",function(){
+        const lunlun = document.createElement('p')
+        lunlun.textContent = 
+        lunchType[Math.floor(Math.random()*lunchType.length)]+", "+
+        lunchTexture[Math.floor(Math.random()*lunchTexture.length)]+", "+
+        lunchArmy[Math.floor(Math.random()*lunchArmy.length)]+", "+
+        lunchHot[Math.floor(Math.random()*lunchHot.length)]+", "+
+        lunchCool[Math.floor(Math.random()*lunchCool.length)]
+        root.appendChild(lunlun)
+      })
+    
+
+
+    </script>
+  </body>
+</html>
