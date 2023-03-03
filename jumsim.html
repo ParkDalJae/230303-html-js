@@ -10,12 +10,15 @@
     <div id="root"></div>
     <script>
       const root = document.getElementById('root')
-      const btn = document.createElement('button')
-      btn.textContent = "눌러"
-      root.appendChild(btn)
+      const btnRan = document.createElement('button')
+      const btnReset = document.createElement('button')
+      btnRan.textContent = "눌러"
+      btnReset.textContent = "리셋"
+      root.appendChild(btnRan)
+      root.appendChild(btnReset)
       
       const lunch = {
-        
+
       }
       const lunchType = [
         "한식",
@@ -42,7 +45,8 @@
         "뜨거운거",
         "차가운거"
       ]
-      btn.addEventListener("click",function(){
+      
+      btnRan.addEventListener("click",function(){
         const lunlun = document.createElement('p')
         lunlun.textContent = 
         lunchType[Math.floor(Math.random()*lunchType.length)]+", "+
@@ -52,7 +56,15 @@
         lunchCool[Math.floor(Math.random()*lunchCool.length)]
         root.appendChild(lunlun)
       })
-    
+      btnReset.addEventListener("click",function(){
+        for(i=0;i<root.children.length;i++){
+
+          delete root.children[i]
+        }
+      })
+      
+      
+      
 
 
     </script>
